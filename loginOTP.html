@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="newLoginOTP">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Show Login OTP
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content loginForm">
+                    <div class="loginForm__left">
+                        <div class="modal-header loginForm__header">
+                            <!-- <h5 class="modal-title" id="exampleModalLabel">Delivery Zones</h5>
+                            <button type="button" >
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                            <a href="#" class="loginForm__back">
+                                <!-- <i class="ut2-icon-outline-arrow_back"></i> -->
+                                <img src="./images/back.png" alt="">
+
+                            </a>
+                            <span class="loginForm__title">LogIn</span>
+                        </div>
+                        <div class="modal-body">
+                            <h2 class="loginForm__text">Please check the OTP sent to your mobile number</h2>
+                            <form action="" class="loginForm__form" data-group-name="digits" data-autosubmit="false"
+                                autocomplete="off">
+                                <div class="loginForm__phone">
+                                    <input type="text" value="8011746848" class="loginForm__input loginForm__number">
+                                    <input type="button" class="loginForm__button loginForm__button--change"
+                                        value="Change">
+                                </div>
+                                <p class="loginForm__enterOTP">Enter OTP</p>
+                                <div class="loginForm__inputBox">
+                                    <input id="digit-1" name="digit-1" data-next="digit-2"
+                                        class="loginForm__input loginForm__inputCode" type="text">
+                                    <input id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1"
+                                        class="loginForm__input loginForm__inputCode" type="text">
+                                    <input id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2"
+                                        class="loginForm__input loginForm__inputCode" type="text">
+                                    <input id="digit-4" name="digit-4" data-previous="digit-3"
+                                        class="loginForm__input loginForm__inputCode" type="text">
+                                </div>
+                                <input type="button" class="loginForm__button loginForm__resend" value="Resend OTP">
+                                <p class="loginForm__timer">00:30</p>
+                                <button type="button" class="loginForm__button loginForm__button--login">Login</button>
+                            </form>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="clearPolygonNow()"
+                                id="clearPolygon">Clear</button>
+                        </div> -->
+                    </div>
+                    <div class="loginForm__right">
+                        <div class="modal-header loginForm__header">
+
+
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" class="close loginForm__close" data-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true"><img src="./images/circle-plus.png" alt=""></span>
+                            </button>
+                            <h2 class="loginForm__text2">Shopping at fingertips!! Download our app</h2>
+                            <div class="loginForm__imgBox">
+                                <div>
+                                    <a href="#"><img src="./images/googleplay.png" alt=""></a></div>
+                                <div>
+                                    <a href="#"><img src="./images/appstore.png" alt=""></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+        <script>
+            const loginForm = document.querySelector('.loginForm__inputBox').querySelectorAll('input').forEach(item => {
+                item.setAttribute('maxlength', 1);
+                item.addEventListener('keyup', (e) => {
+                    let parent = item.parentElement;
+                    if (e.keyCode === 8 || e.keyCode === 37) {
+
+                        let prev = parent.querySelectorAll(`input#${item.dataset.previous}`);
+                        if (prev.length) {
+                            document.querySelector(`input#${prev[0].id}`).select();
+                            console.log("back")
+                        }
+                    } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <=
+                            90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+                        let next = parent.querySelectorAll(`input#${item.dataset.next}
+                        `);
+                        if (next.length) {
+                            document.querySelector(`input#${next[0].id}`).select();
+                            console.log("next")
+                        } else {
+                            if (parent.dataset.autosubmit) {
+                                parent.submit();
+                                console.log("submit")
+                            }
+                        }
+                    }
+                })
+            });
+        </script>
+</body>
+
+</html>

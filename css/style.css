@@ -1,0 +1,267 @@
+@charset "UTF-8";
+#newLoginOTP .loginForm {
+  flex-direction: row;
+  height: 327px;
+  width: 488px;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+#newLoginOTP .loginForm i[class^=ut2-icon-], #newLoginOTP .loginForm .ut2-icon {
+  font-family: uni2-icons;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#newLoginOTP .loginForm i[class^=ut2-icon-]:not(.ut2-icon-outline-expand_more), #newLoginOTP .loginForm i[class^=ut2-icon-]:not(.ut2-icon-outline-expand_more) {
+  color: #fff;
+  color: white;
+}
+#newLoginOTP .loginForm i[class^=ut2-icon-] {
+  position: relative;
+  font-size: 28px;
+  padding-right: 5px;
+}
+#newLoginOTP .loginForm .ut2-icon-outline-arrow_back:before {
+  content: "";
+}
+#newLoginOTP .loginForm__header {
+  display: flex;
+  align-items: center;
+  padding: 0 50px 0 20px;
+  min-height: 50px;
+  background: #43b02a;
+  border: 0 none;
+  border-radius: 0;
+  z-index: 1;
+  position: relative;
+}
+#newLoginOTP .loginForm__title {
+  padding-right: 0;
+  font-family: MuseoSansBlack, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #fff !important;
+  margin-right: auto;
+  margin-left: 10px;
+}
+#newLoginOTP .loginForm__back {
+  padding-right: 0;
+  font-family: MuseoSansBlack, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #fff !important;
+}
+#newLoginOTP .loginForm__left {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#newLoginOTP .loginForm__right {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#newLoginOTP .loginForm__right .loginForm__header {
+  visibility: hidden;
+}
+#newLoginOTP .loginForm .modal-body, #newLoginOTP .loginForm .modal-footer {
+  background: #fff;
+  border-radius: 0;
+}
+#newLoginOTP .loginForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#newLoginOTP .loginForm__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #525151;
+}
+#newLoginOTP .loginForm__button {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: Roboto;
+  font-style: normal;
+  text-align: center;
+}
+#newLoginOTP .loginForm__input {
+  border: none;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  padding: 0;
+  transition: border 0.2s linear 0s;
+}
+#newLoginOTP .loginForm__number {
+  width: 125px;
+  height: 32px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -moz-border-radius: 0;
+  -moz-border-radius: 4px;
+  margin: 0;
+  padding: 5px 5px 5px;
+  box-sizing: border-box;
+  color: #000000;
+}
+#newLoginOTP .loginForm__number:focus {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+  -moz-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+  font-size: 90%;
+  border-color: #43b02a;
+  box-shadow: 0 0 0 2px rgba(67, 176, 42, 0.1);
+}
+#newLoginOTP .loginForm__button--change {
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #43b02a;
+}
+#newLoginOTP .loginForm__enterOTP {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #8a8a8a;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+#newLoginOTP .loginForm__inputBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+#newLoginOTP .loginForm__inputCode {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #aaa9a9;
+  background: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+#newLoginOTP .loginForm__inputCode:focus {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+  -moz-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+  font-size: 110%;
+  border-color: #43b02a;
+  width: 40px;
+}
+#newLoginOTP .loginForm__inputCode:not(:last-child) {
+  margin-right: 15px;
+}
+#newLoginOTP .loginForm__resend {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: #43b02a;
+  margin-bottom: 10px;
+}
+#newLoginOTP .loginForm__timer {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #626161;
+  margin-bottom: 50px;
+}
+#newLoginOTP .loginForm__button--login {
+  background: #43b02a;
+  box-shadow: 0px 1.5px 0px rgba(0, 0, 0, 0.59);
+  border-radius: 5px;
+  width: 190px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  height: 35px;
+}
+#newLoginOTP .loginForm__button--login:hover {
+  border-bottom: 5px solid black;
+  transition: border 0.2s linear 0s;
+  animation: login;
+}
+#newLoginOTP .loginForm__text2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: #8a8a8a;
+  margin-bottom: 30px;
+}
+#newLoginOTP .loginForm__imgBox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#newLoginOTP .loginForm__imgBox div {
+  width: 99px;
+  height: 28px;
+  margin-bottom: 10px;
+}
+#newLoginOTP .loginForm__imgBox div:hover img {
+  transform: scale(1.2);
+  transition: ease 0.2s;
+}
+#newLoginOTP .loginForm__imgBox div img {
+  width: 100%;
+  max-width: 100%;
+}
+#newLoginOTP .loginForm__right .modal-body {
+  padding: 50px 5px;
+}
+#newLoginOTP .loginForm__close {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: Roboto;
+  font-style: normal;
+  text-align: center;
+  position: relative;
+  top: -45px;
+}
+@keyframes login {}
